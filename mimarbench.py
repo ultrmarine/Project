@@ -405,7 +405,7 @@ class MiMarBench:
         self.check += 1
         ontimer(screen.bye, 500) # закрывает черепашку с задержкой в 500 милисекунд
 
-        with open("results.txt", "a") as file:
+        with open("results.txt", "w", encoding="utf-8") as file:
             file.write(f"Запуск {self.check}: {duration} сек\n")
         print(f"Время отрисовки черепашки: {duration} сек.")
         self.benchmark_listbox.delete(0, END)
